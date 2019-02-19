@@ -1,0 +1,18 @@
+<h1><%= @task.title %></h1>
+<br>
+<div class="description">
+  <%= @task.details %>
+</div>
+<br>
+<div>
+  <a href="#">
+    <% if @task.completed %>
+      <i class="far fa-check-square"> This task is completed</i>
+    <% else %>
+      <i class="far fa-square"> Complete this task</i>
+    <% end %>
+  </a>
+</div>
+<br>
+<br>
+<%= link_to 'Back to the list', '/'  %>

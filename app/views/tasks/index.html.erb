@@ -1,5 +1,8 @@
 <h1>Liste de tâches</h1>
 <br>
+<a href="/tasks/new">Create a new task</a>
+<br>
+<br>
 <% @tasks.each do |task| %>
   <div class="inline">
     <span>
@@ -10,5 +13,10 @@
       <% end %>
     </span>
     <span><a href=<%= "/tasks/#{task.id}" %>><%= task.title %></a></span>
+    <span>
+      <%= link_to task_path(task), method: :delete do%>
+        <i class="fas fa-trash"></i>
+      <% end %>
+    </span>
   </div>
 <% end %>

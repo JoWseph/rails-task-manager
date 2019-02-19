@@ -1,4 +1,7 @@
-<h1><%= @task.title %></h1>
+<div class="header">
+  <h1><%= @task.title %></h1>
+  <a href=<%="/tasks/#{@task.id}/edit"%> >Edit this task</a>
+</div>
 <br>
 <div class="description">
   <%= @task.details %>
@@ -15,4 +18,4 @@
 </div>
 <br>
 <br>
-<%= link_to 'Back to the list', '/'  %>
+<%= link_to 'Back to the list', tasks_path  %>
